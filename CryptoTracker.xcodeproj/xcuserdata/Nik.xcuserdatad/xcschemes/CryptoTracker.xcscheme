@@ -5,6 +5,22 @@
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "246428421CEF3D9C00B132E9"
+               BuildableName = "CryptoTracker.app"
+               BlueprintName = "CryptoTracker"
+               ReferencedContainer = "container:CryptoTracker.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
    </BuildAction>
    <TestAction
       buildConfiguration = "Debug"
@@ -12,7 +28,36 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "246428511CEF3D9C00B132E9"
+               BuildableName = "CryptoTrackerTests.xctest"
+               BlueprintName = "CryptoTrackerTests"
+               ReferencedContainer = "container:CryptoTracker.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "2464285C1CEF3D9C00B132E9"
+               BuildableName = "CryptoTrackerUITests.xctest"
+               BlueprintName = "CryptoTrackerUITests"
+               ReferencedContainer = "container:CryptoTracker.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "246428421CEF3D9C00B132E9"
+            BuildableName = "CryptoTracker.app"
+            BlueprintName = "CryptoTracker"
+            ReferencedContainer = "container:CryptoTracker.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -26,6 +71,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "246428421CEF3D9C00B132E9"
+            BuildableName = "CryptoTracker.app"
+            BlueprintName = "CryptoTracker"
+            ReferencedContainer = "container:CryptoTracker.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -35,6 +90,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "246428421CEF3D9C00B132E9"
+            BuildableName = "CryptoTracker.app"
+            BlueprintName = "CryptoTracker"
+            ReferencedContainer = "container:CryptoTracker.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
