@@ -6,4 +6,4 @@ Features:
 - open exchange (kraken.com)
 
 Installation:
-- clone or download > download as ZIP > drag latest version from 'export' folder to 'application' folder
+- clone or download > download as ZIP > drag latest version from 'export' folder to local 'application' folder
