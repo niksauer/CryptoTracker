@@ -1,7 +1,7 @@
 # CryptoTracker
 Features: 
 - updates itself every 5 seconds (data feed via Kraken API)
-- choose between ETH/EUR or ETH/BTC trading pairs
+- choose between ETH/EUR or ETH/BTC trading pairs (selection persists between relaunch)
 - open candlestick chart (cryptowatch.de)
 - open exchange (kraken.com)
 
