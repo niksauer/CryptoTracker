@@ -13,14 +13,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     @IBOutlet weak var window: NSWindow!
 
-    var statusBarItem = NSStatusBar.systemStatusBar().statusItemWithLength(-1)
-    var setPrice = "ETHEUR"
-    var setPair = "XETHZEUR"
+    let defaults = NSUserDefaults.standardUserDefaults()
+    
+    let statusBarItem = NSStatusBar.systemStatusBar().statusItemWithLength(-1)
+    let option1: NSMenuItem = NSMenuItem(title: "ETH/EUR", action: #selector(AppDelegate.callSetSelection), keyEquivalent: "")
+    let option2: NSMenuItem = NSMenuItem(title: "ETH/BTC", action: #selector(AppDelegate.callSetSelection), keyEquivalent: "")
     
     func applicationDidFinishLaunching(aNotification: NSNotification) {
-        statusBarItem.title = getPrice()
-        
         let menu: NSMenu = NSMenu()
+        
         menu.addItem(NSMenuItem(title: "Update", action: #selector(AppDelegate.updatePrice), keyEquivalent: ""))
         menu.addItem(NSMenuItem.separatorItem())
         menu.addItem(NSMenuItem(title: "Open Chart", action: #selector(AppDelegate.openURL), keyEquivalent: "o"))
@@ -29,15 +30,19 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         let submenu: NSMenu = NSMenu(title: "Price")
         let submenuItem: NSMenuItem = NSMenuItem(title: "Set Price", action: nil, keyEquivalent: ",")
+        
         menu.addItem(submenuItem)
         menu.setSubmenu(submenu, forItem: submenuItem)
         
-        submenu.addItem(NSMenuItem(title: "ETH/EUR", action: #selector(AppDelegate.setPrice), keyEquivalent: ""))
-        submenu.addItem(NSMenuItem(title: "ETH/BTC", action: #selector(AppDelegate.setPrice), keyEquivalent: ""))
+        submenu.addItem(option1)
+        submenu.addItem(option2)
         
         menu.addItem(NSMenuItem(title: "Quit", action: #selector(NSApp.terminate(_:)), keyEquivalent: "q"))
         
         statusBarItem.menu = menu
+    
+        checkForDefaults()
+        statusBarItem.title = getPrice()
         
         NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: #selector(AppDelegate.updatePrice), userInfo: nil, repeats: true)
     }
@@ -58,11 +63,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func getPrice() -> String {
-        let inputData = getJSON("https://api.kraken.com/0/public/Ticker?pair=" + setPrice)
+        let inputData = getJSON("https://api.kraken.com/0/public/Ticker?pair=" + defaults.stringForKey("setPrice")!)
         
         do {
             let ticker = try NSJSONSerialization.JSONObjectWithData(inputData, options: [])
-            let bidArray = ticker["result"]??[setPair]??["c"] as! NSArray
+            let bidArray = ticker["result"]??[defaults.stringForKey("setPair")!]??["c"] as! NSArray
             let price = bidArray[0] as! String
             let index = price.startIndex.advancedBy(5)
             return "Ξ" + price.substringToIndex(index)
@@ -77,15 +82,39 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         statusBarItem.title = newPrice
     }
     
-    func setPrice(sender: AnyObject) {
+    func callSetSelection(sender: AnyObject) {
         if sender.title == "ETH/EUR" {
-            setPrice = "ETHEUR"
-            setPair = "XETHZEUR"
+            setSelection("ETHEUR")
         } else if sender.title == "ETH/BTC" {
-            setPrice = "ETHXBT"
-            setPair = "XETHXXBT"
+            setSelection("ETHXBT")
         }
-     }
+    }
+    
+    func setSelection(selection: String) {
+        if selection == "ETHEUR" {
+            defaults.setObject("ETHEUR", forKey: "setPrice")
+            defaults.setObject("XETHZEUR", forKey: "setPair")
+            option1.title = "ETH/EUR ✓"
+            option2.title = "ETH/BTC"
+        } else if selection == "ETHXBT" {
+            defaults.setObject("ETHXBT", forKey: "setPrice")
+            defaults.setObject("XETHXXBT", forKey: "setPair")
+            option1.title = "ETH/EUR"
+            option2.title = "ETH/BTC ✓"
+        }
+    }
+    
+    func checkForDefaults() {
+        if (defaults.stringForKey("setPrice") == nil) {
+            defaults.setObject("ETHEUR", forKey: "setPrice")
+            defaults.setObject("XETHZEUR", forKey: "setPair")
+            setSelection("ETHEUR")
+        } else if (defaults.stringForKey("setPrice") == "ETHEUR") {
+            setSelection("ETHEUR")
+        } else if (defaults.stringForKey("setPrice") == "ETHXBT") {
+            setSelection("ETHXBT")
+        }
+    }
 
     func applicationWillTerminate(aNotification: NSNotification) {
         // Insert code here to tear down your application
