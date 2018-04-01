@@ -19,7 +19,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     let defaults = UserDefaults.standard
     
-    let statusBarItem = NSStatusBar.system().statusItem(withLength: -1)
+    let statusBarItem = NSStatusBar.system.statusItem(withLength: -1)
     let option1: NSMenuItem = NSMenuItem(title: "ETH/EUR", action: #selector(AppDelegate.callSetSelection), keyEquivalent: "")
     let option2: NSMenuItem = NSMenuItem(title: "ETH/BTC", action: #selector(AppDelegate.callSetSelection), keyEquivalent: "")
     
@@ -51,14 +51,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(AppDelegate.updatePrice), userInfo: nil, repeats: true)
     }
     
-    func openURL(_ sender: AnyObject) {
+    @objc func openURL(_ sender: AnyObject) {
         let exchange = "https://www.kraken.com/en-us/login"
         let chart = "https://cryptowatch.de/kraken/etheur"
         
         if sender.title == "Open Chart" {
-            NSWorkspace.shared().open(URL(string: chart)!)
+            NSWorkspace.shared.open(URL(string: chart)!)
         } else if sender.title == "Open Exchange" {
-            NSWorkspace.shared().open(URL(string: exchange)!)
+            NSWorkspace.shared.open(URL(string: exchange)!)
         }
     }
     
@@ -90,7 +90,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         return "test"
     }
     
-    func updatePrice() {
+    @objc func updatePrice() {
         do {
             let newPrice = try getPrice()
             statusBarItem.title = newPrice
@@ -99,7 +99,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
     
-    func callSetSelection(_ sender: AnyObject) {
+    @objc func callSetSelection(_ sender: AnyObject) {
         if sender.title == "ETH/EUR" {
             setSelection("ETHEUR")
         } else if sender.title == "ETH/BTC" {
