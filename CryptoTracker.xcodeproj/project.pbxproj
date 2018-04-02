@@ -12,6 +12,19 @@
 		2464284C1CEF3D9C00B132E9 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2464284A1CEF3D9C00B132E9 /* MainMenu.xib */; };
 		246428571CEF3D9C00B132E9 /* CryptoTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246428561CEF3D9C00B132E9 /* CryptoTrackerTests.swift */; };
 		246428621CEF3D9C00B132E9 /* CryptoTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246428611CEF3D9C00B132E9 /* CryptoTrackerUITests.swift */; };
+		24AA5993207158DB00489EB6 /* TickerDaemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AA5992207158DB00489EB6 /* TickerDaemon.swift */; };
+		24AA5995207159AC00489EB6 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AA5994207159AC00489EB6 /* Currency.swift */; };
+		24AA599720715BAE00489EB6 /* TickerConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AA599620715BAE00489EB6 /* TickerConnector.swift */; };
+		24AA599920715C0600489EB6 /* CryptoCompareAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AA599820715C0600489EB6 /* CryptoCompareAPI.swift */; };
+		24AA599C20725A1600489EB6 /* CurrencyPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AA599B20725A1600489EB6 /* CurrencyPair.swift */; };
+		24AA599F20725A5D00489EB6 /* Exchange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AA599E20725A5D00489EB6 /* Exchange.swift */; };
+		24AA59A220727EAF00489EB6 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AA59A120727EAF00489EB6 /* Date.swift */; };
+		24AA59A420727EC300489EB6 /* General.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AA59A320727EC300489EB6 /* General.swift */; };
+		24AA59A620727F5A00489EB6 /* TrackerMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AA59A520727F5A00489EB6 /* TrackerMenu.swift */; };
+		24AA59A9207288E100489EB6 /* Blockchain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AA59A8207288E100489EB6 /* Blockchain.swift */; };
+		24AA59AB2072892000489EB6 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AA59AA2072892000489EB6 /* Formatter.swift */; };
+		24AA59AD20728A9700489EB6 /* Fiat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AA59AC20728A9700489EB6 /* Fiat.swift */; };
+		24AA59AF2072931700489EB6 /* CryptoTrackerStatusItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AA59AE2072931700489EB6 /* CryptoTrackerStatusItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +56,19 @@
 		2464285D1CEF3D9C00B132E9 /* CryptoTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		246428611CEF3D9C00B132E9 /* CryptoTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoTrackerUITests.swift; sourceTree = "<group>"; };
 		246428631CEF3D9C00B132E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24AA5992207158DB00489EB6 /* TickerDaemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerDaemon.swift; sourceTree = "<group>"; };
+		24AA5994207159AC00489EB6 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		24AA599620715BAE00489EB6 /* TickerConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerConnector.swift; sourceTree = "<group>"; };
+		24AA599820715C0600489EB6 /* CryptoCompareAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCompareAPI.swift; sourceTree = "<group>"; };
+		24AA599B20725A1600489EB6 /* CurrencyPair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyPair.swift; sourceTree = "<group>"; };
+		24AA599E20725A5D00489EB6 /* Exchange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Exchange.swift; path = CryptoTracker/Protocol/Exchange.swift; sourceTree = SOURCE_ROOT; };
+		24AA59A120727EAF00489EB6 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		24AA59A320727EC300489EB6 /* General.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = General.swift; sourceTree = "<group>"; };
+		24AA59A520727F5A00489EB6 /* TrackerMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerMenu.swift; sourceTree = "<group>"; };
+		24AA59A8207288E100489EB6 /* Blockchain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blockchain.swift; sourceTree = "<group>"; };
+		24AA59AA2072892000489EB6 /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
+		24AA59AC20728A9700489EB6 /* Fiat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fiat.swift; sourceTree = "<group>"; };
+		24AA59AE2072931700489EB6 /* CryptoTrackerStatusItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CryptoTrackerStatusItem.swift; path = View/CryptoTrackerStatusItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +120,11 @@
 			isa = PBXGroup;
 			children = (
 				246428461CEF3D9C00B132E9 /* AppDelegate.swift */,
+				24AA59AE2072931700489EB6 /* CryptoTrackerStatusItem.swift */,
+				24AA59A020727EA100489EB6 /* Extension */,
+				24AA599D20725A3F00489EB6 /* Protocol */,
+				24AA599A207258E900489EB6 /* Model */,
+				24AA59A720727F5F00489EB6 /* View */,
 				246428481CEF3D9C00B132E9 /* Assets.xcassets */,
 				2464284A1CEF3D9C00B132E9 /* MainMenu.xib */,
 				2464284D1CEF3D9C00B132E9 /* Info.plist */,
@@ -117,6 +148,46 @@
 				246428631CEF3D9C00B132E9 /* Info.plist */,
 			);
 			path = CryptoTrackerUITests;
+			sourceTree = "<group>";
+		};
+		24AA599A207258E900489EB6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				24AA59A8207288E100489EB6 /* Blockchain.swift */,
+				24AA59AA2072892000489EB6 /* Formatter.swift */,
+				24AA59AC20728A9700489EB6 /* Fiat.swift */,
+				24AA599B20725A1600489EB6 /* CurrencyPair.swift */,
+				24AA599620715BAE00489EB6 /* TickerConnector.swift */,
+				24AA599820715C0600489EB6 /* CryptoCompareAPI.swift */,
+				24AA5992207158DB00489EB6 /* TickerDaemon.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		24AA599D20725A3F00489EB6 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				24AA5994207159AC00489EB6 /* Currency.swift */,
+				24AA599E20725A5D00489EB6 /* Exchange.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		24AA59A020727EA100489EB6 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				24AA59A120727EAF00489EB6 /* Date.swift */,
+				24AA59A320727EC300489EB6 /* General.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		24AA59A720727F5F00489EB6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				24AA59A520727F5A00489EB6 /* TrackerMenu.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,7 +323,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24AA5995207159AC00489EB6 /* Currency.swift in Sources */,
+				24AA599720715BAE00489EB6 /* TickerConnector.swift in Sources */,
 				246428471CEF3D9C00B132E9 /* AppDelegate.swift in Sources */,
+				24AA59A620727F5A00489EB6 /* TrackerMenu.swift in Sources */,
+				24AA59A420727EC300489EB6 /* General.swift in Sources */,
+				24AA59A9207288E100489EB6 /* Blockchain.swift in Sources */,
+				24AA59AB2072892000489EB6 /* Formatter.swift in Sources */,
+				24AA59A220727EAF00489EB6 /* Date.swift in Sources */,
+				24AA59AF2072931700489EB6 /* CryptoTrackerStatusItem.swift in Sources */,
+				24AA599920715C0600489EB6 /* CryptoCompareAPI.swift in Sources */,
+				24AA599C20725A1600489EB6 /* CurrencyPair.swift in Sources */,
+				24AA59AD20728A9700489EB6 /* Fiat.swift in Sources */,
+				24AA5993207158DB00489EB6 /* TickerDaemon.swift in Sources */,
+				24AA599F20725A5D00489EB6 /* Exchange.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,7 +495,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sauern.CryptoTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -425,7 +509,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sauern.CryptoTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
