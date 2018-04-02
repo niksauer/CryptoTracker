@@ -10,8 +10,6 @@
 		246428471CEF3D9C00B132E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246428461CEF3D9C00B132E9 /* AppDelegate.swift */; };
 		246428491CEF3D9C00B132E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 246428481CEF3D9C00B132E9 /* Assets.xcassets */; };
 		2464284C1CEF3D9C00B132E9 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2464284A1CEF3D9C00B132E9 /* MainMenu.xib */; };
-		246428571CEF3D9C00B132E9 /* CryptoTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246428561CEF3D9C00B132E9 /* CryptoTrackerTests.swift */; };
-		246428621CEF3D9C00B132E9 /* CryptoTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246428611CEF3D9C00B132E9 /* CryptoTrackerUITests.swift */; };
 		24AA5993207158DB00489EB6 /* TickerDaemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AA5992207158DB00489EB6 /* TickerDaemon.swift */; };
 		24AA5995207159AC00489EB6 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AA5994207159AC00489EB6 /* Currency.swift */; };
 		24AA599720715BAE00489EB6 /* TickerConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AA599620715BAE00489EB6 /* TickerConnector.swift */; };
@@ -28,35 +26,12 @@
 		24D0A2942072D3D4000B9F3F /* CryptoTrackerMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D0A2932072D3D4000B9F3F /* CryptoTrackerMenu.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		246428531CEF3D9C00B132E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2464283B1CEF3D9C00B132E9 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 246428421CEF3D9C00B132E9;
-			remoteInfo = CryptoTracker;
-		};
-		2464285E1CEF3D9C00B132E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2464283B1CEF3D9C00B132E9 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 246428421CEF3D9C00B132E9;
-			remoteInfo = CryptoTracker;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		246428431CEF3D9C00B132E9 /* CryptoTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		246428461CEF3D9C00B132E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		246428481CEF3D9C00B132E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2464284B1CEF3D9C00B132E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		2464284D1CEF3D9C00B132E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		246428521CEF3D9C00B132E9 /* CryptoTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		246428561CEF3D9C00B132E9 /* CryptoTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoTrackerTests.swift; sourceTree = "<group>"; };
-		246428581CEF3D9C00B132E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2464285D1CEF3D9C00B132E9 /* CryptoTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		246428611CEF3D9C00B132E9 /* CryptoTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoTrackerUITests.swift; sourceTree = "<group>"; };
-		246428631CEF3D9C00B132E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24AA5992207158DB00489EB6 /* TickerDaemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerDaemon.swift; sourceTree = "<group>"; };
 		24AA5994207159AC00489EB6 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		24AA599620715BAE00489EB6 /* TickerConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerConnector.swift; sourceTree = "<group>"; };
@@ -81,20 +56,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2464284F1CEF3D9C00B132E9 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2464285A1CEF3D9C00B132E9 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -102,8 +63,6 @@
 			isa = PBXGroup;
 			children = (
 				246428451CEF3D9C00B132E9 /* CryptoTracker */,
-				246428551CEF3D9C00B132E9 /* CryptoTrackerTests */,
-				246428601CEF3D9C00B132E9 /* CryptoTrackerUITests */,
 				246428441CEF3D9C00B132E9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -112,8 +71,6 @@
 			isa = PBXGroup;
 			children = (
 				246428431CEF3D9C00B132E9 /* CryptoTracker.app */,
-				246428521CEF3D9C00B132E9 /* CryptoTrackerTests.xctest */,
-				2464285D1CEF3D9C00B132E9 /* CryptoTrackerUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -133,24 +90,6 @@
 				2464284D1CEF3D9C00B132E9 /* Info.plist */,
 			);
 			path = CryptoTracker;
-			sourceTree = "<group>";
-		};
-		246428551CEF3D9C00B132E9 /* CryptoTrackerTests */ = {
-			isa = PBXGroup;
-			children = (
-				246428561CEF3D9C00B132E9 /* CryptoTrackerTests.swift */,
-				246428581CEF3D9C00B132E9 /* Info.plist */,
-			);
-			path = CryptoTrackerTests;
-			sourceTree = "<group>";
-		};
-		246428601CEF3D9C00B132E9 /* CryptoTrackerUITests */ = {
-			isa = PBXGroup;
-			children = (
-				246428611CEF3D9C00B132E9 /* CryptoTrackerUITests.swift */,
-				246428631CEF3D9C00B132E9 /* Info.plist */,
-			);
-			path = CryptoTrackerUITests;
 			sourceTree = "<group>";
 		};
 		24AA599A207258E900489EB6 /* Model */ = {
@@ -205,42 +144,6 @@
 			productReference = 246428431CEF3D9C00B132E9 /* CryptoTracker.app */;
 			productType = "com.apple.product-type.application";
 		};
-		246428511CEF3D9C00B132E9 /* CryptoTrackerTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 246428691CEF3D9C00B132E9 /* Build configuration list for PBXNativeTarget "CryptoTrackerTests" */;
-			buildPhases = (
-				2464284E1CEF3D9C00B132E9 /* Sources */,
-				2464284F1CEF3D9C00B132E9 /* Frameworks */,
-				246428501CEF3D9C00B132E9 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				246428541CEF3D9C00B132E9 /* PBXTargetDependency */,
-			);
-			name = CryptoTrackerTests;
-			productName = CryptoTrackerTests;
-			productReference = 246428521CEF3D9C00B132E9 /* CryptoTrackerTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		2464285C1CEF3D9C00B132E9 /* CryptoTrackerUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2464286C1CEF3D9C00B132E9 /* Build configuration list for PBXNativeTarget "CryptoTrackerUITests" */;
-			buildPhases = (
-				246428591CEF3D9C00B132E9 /* Sources */,
-				2464285A1CEF3D9C00B132E9 /* Frameworks */,
-				2464285B1CEF3D9C00B132E9 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2464285F1CEF3D9C00B132E9 /* PBXTargetDependency */,
-			);
-			name = CryptoTrackerUITests;
-			productName = CryptoTrackerUITests;
-			productReference = 2464285D1CEF3D9C00B132E9 /* CryptoTrackerUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -254,16 +157,6 @@
 					246428421CEF3D9C00B132E9 = {
 						CreatedOnToolsVersion = 7.3.1;
 						LastSwiftMigration = 0930;
-					};
-					246428511CEF3D9C00B132E9 = {
-						CreatedOnToolsVersion = 7.3.1;
-						LastSwiftMigration = 0930;
-						TestTargetID = 246428421CEF3D9C00B132E9;
-					};
-					2464285C1CEF3D9C00B132E9 = {
-						CreatedOnToolsVersion = 7.3.1;
-						LastSwiftMigration = 0930;
-						TestTargetID = 246428421CEF3D9C00B132E9;
 					};
 				};
 			};
@@ -281,8 +174,6 @@
 			projectRoot = "";
 			targets = (
 				246428421CEF3D9C00B132E9 /* CryptoTracker */,
-				246428511CEF3D9C00B132E9 /* CryptoTrackerTests */,
-				2464285C1CEF3D9C00B132E9 /* CryptoTrackerUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -294,20 +185,6 @@
 			files = (
 				246428491CEF3D9C00B132E9 /* Assets.xcassets in Resources */,
 				2464284C1CEF3D9C00B132E9 /* MainMenu.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		246428501CEF3D9C00B132E9 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2464285B1CEF3D9C00B132E9 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,36 +213,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2464284E1CEF3D9C00B132E9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				246428571CEF3D9C00B132E9 /* CryptoTrackerTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		246428591CEF3D9C00B132E9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				246428621CEF3D9C00B132E9 /* CryptoTrackerUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		246428541CEF3D9C00B132E9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 246428421CEF3D9C00B132E9 /* CryptoTracker */;
-			targetProxy = 246428531CEF3D9C00B132E9 /* PBXContainerItemProxy */;
-		};
-		2464285F1CEF3D9C00B132E9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 246428421CEF3D9C00B132E9 /* CryptoTracker */;
-			targetProxy = 2464285E1CEF3D9C00B132E9 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		2464284A1CEF3D9C00B132E9 /* MainMenu.xib */ = {
@@ -510,64 +358,6 @@
 			};
 			name = Release;
 		};
-		2464286A1CEF3D9C00B132E9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = CryptoTrackerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = sauern.CryptoTrackerTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CryptoTracker.app/Contents/MacOS/CryptoTracker";
-			};
-			name = Debug;
-		};
-		2464286B1CEF3D9C00B132E9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = CryptoTrackerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = sauern.CryptoTrackerTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CryptoTracker.app/Contents/MacOS/CryptoTracker";
-			};
-			name = Release;
-		};
-		2464286D1CEF3D9C00B132E9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = CryptoTrackerUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = sauern.CryptoTrackerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
-				TEST_TARGET_NAME = CryptoTracker;
-			};
-			name = Debug;
-		};
-		2464286E1CEF3D9C00B132E9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = CryptoTrackerUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = sauern.CryptoTrackerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
-				TEST_TARGET_NAME = CryptoTracker;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -585,24 +375,6 @@
 			buildConfigurations = (
 				246428671CEF3D9C00B132E9 /* Debug */,
 				246428681CEF3D9C00B132E9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		246428691CEF3D9C00B132E9 /* Build configuration list for PBXNativeTarget "CryptoTrackerTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2464286A1CEF3D9C00B132E9 /* Debug */,
-				2464286B1CEF3D9C00B132E9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2464286C1CEF3D9C00B132E9 /* Build configuration list for PBXNativeTarget "CryptoTrackerUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2464286D1CEF3D9C00B132E9 /* Debug */,
-				2464286E1CEF3D9C00B132E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
