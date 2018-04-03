@@ -31,6 +31,8 @@ final class TickerDaemon {
     private var currentExchangeRateForCurrencyPair = [CurrencyPair: Double]()
     private var requestsForCurrencyPair = [CurrencyPair: Int]()
     
+    private let cryptoCompareService = CryptoCompareService(credentials: nil)
+    
     // MARK: - Public Methods
     func addCurrencyPair(_ currencyPair: CurrencyPair) {
         if !currencyPairs.contains(currencyPair) {
@@ -119,18 +121,18 @@ final class TickerDaemon {
     
     // MARK: - Private Methods
     private func updateExchangeRate(for currencyPair: CurrencyPair, completion: (() -> Void)?) {
-        TickerConnector.fetchCurrentExchangeRate(for: currencyPair, completion: { result in
-            switch result {
-            case .success(let currentExchangeRate):
-                self.currentExchangeRateForCurrencyPair[currencyPair] = currentExchangeRate.value
-                print("Updated current exchange rate for currency pair '\(currencyPair.name)': \(currentExchangeRate.value)")
-                self.delegate?.didUpdateCurrentExchangeRate(for: currencyPair)
+        cryptoCompareService.getExchangeRate(for: currencyPair) { exchangeRate, error in
+            guard let exchangeRate = exchangeRate else {
+                print("Failed to fetch current exchange rate for currency pair '\(currencyPair.name)': \(error!)")
                 completion?()
-            case .failure(let error):
-                print("Failed to fetch current exchange rate for currency pair '\(currencyPair.name)': \(error)")
-                completion?()
+                return
             }
-        })
+            
+            self.currentExchangeRateForCurrencyPair[currencyPair] = exchangeRate.value
+            print("Updated current exchange rate for currency pair '\(currencyPair.name)': \(exchangeRate.value)")
+            self.delegate?.didUpdateCurrentExchangeRate(for: currencyPair)
+            completion?()
+        }
     }
 
 }

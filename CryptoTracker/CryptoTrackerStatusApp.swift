@@ -42,7 +42,17 @@ struct CryptoTrackerStatusApp: TickerDaemonDelegate, CryptoTrackerStatusMenuDele
             return
         }
         
-        statusBarItem.title = formatter.getFormatting(for: exchangeRate, currency: currencyPair.base)
+        guard let exchangeRateString = formatter.getFormatting(for: exchangeRate, currency: currencyPair.base) else {
+            print("Failed to get currency formatting for exchange rate.")
+            return
+        }
+
+        let attributes: [NSAttributedStringKey: Any] = [
+            NSAttributedStringKey.font: NSFont.systemFont(ofSize: 12)
+        ]
+        
+        let attributedString = NSAttributedString(string: exchangeRateString, attributes: attributes)
+        statusBarItem.attributedTitle = attributedString
     }
 
     // MARK: - CryptoTrackerMenubarMenuDelegate Protocol

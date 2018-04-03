@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24621E4420736D3300AE04FD /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24621E4320736D3300AE04FD /* APIClient.swift */; };
+		24621E4820736DA600AE04FD /* SimpleAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24621E4720736DA600AE04FD /* SimpleAPIClient.swift */; };
+		24621E4A20736FBD00AE04FD /* CryptoCompareService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24621E4920736FBD00AE04FD /* CryptoCompareService.swift */; };
+		24621E4C2073706100AE04FD /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24621E4B2073706100AE04FD /* Service.swift */; };
 		246428471CEF3D9C00B132E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246428461CEF3D9C00B132E9 /* AppDelegate.swift */; };
 		246428491CEF3D9C00B132E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 246428481CEF3D9C00B132E9 /* Assets.xcassets */; };
 		2464284C1CEF3D9C00B132E9 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2464284A1CEF3D9C00B132E9 /* MainMenu.xib */; };
 		24AA5993207158DB00489EB6 /* TickerDaemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AA5992207158DB00489EB6 /* TickerDaemon.swift */; };
 		24AA5995207159AC00489EB6 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AA5994207159AC00489EB6 /* Currency.swift */; };
-		24AA599720715BAE00489EB6 /* TickerConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AA599620715BAE00489EB6 /* TickerConnector.swift */; };
-		24AA599920715C0600489EB6 /* CryptoCompareAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AA599820715C0600489EB6 /* CryptoCompareAPI.swift */; };
 		24AA599C20725A1600489EB6 /* CurrencyPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AA599B20725A1600489EB6 /* CurrencyPair.swift */; };
 		24AA59A220727EAF00489EB6 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AA59A120727EAF00489EB6 /* Date.swift */; };
 		24AA59A9207288E100489EB6 /* Blockchain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AA59A8207288E100489EB6 /* Blockchain.swift */; };
@@ -24,6 +26,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		24621E4320736D3300AE04FD /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		24621E4720736DA600AE04FD /* SimpleAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleAPIClient.swift; sourceTree = "<group>"; };
+		24621E4920736FBD00AE04FD /* CryptoCompareService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCompareService.swift; sourceTree = "<group>"; };
+		24621E4B2073706100AE04FD /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		246428431CEF3D9C00B132E9 /* CryptoTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		246428461CEF3D9C00B132E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		246428481CEF3D9C00B132E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -31,8 +37,6 @@
 		2464284D1CEF3D9C00B132E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24AA5992207158DB00489EB6 /* TickerDaemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerDaemon.swift; sourceTree = "<group>"; };
 		24AA5994207159AC00489EB6 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
-		24AA599620715BAE00489EB6 /* TickerConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerConnector.swift; sourceTree = "<group>"; };
-		24AA599820715C0600489EB6 /* CryptoCompareAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCompareAPI.swift; sourceTree = "<group>"; };
 		24AA599B20725A1600489EB6 /* CurrencyPair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyPair.swift; sourceTree = "<group>"; };
 		24AA59A120727EAF00489EB6 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		24AA59A8207288E100489EB6 /* Blockchain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blockchain.swift; sourceTree = "<group>"; };
@@ -63,6 +67,24 @@
 			path = Currency;
 			sourceTree = "<group>";
 		};
+		24621E4520736D5200AE04FD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				24D0A2932072D3D4000B9F3F /* CryptoTrackerStatusMenu.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		24621E4620736D9300AE04FD /* Backend */ = {
+			isa = PBXGroup;
+			children = (
+				24621E4320736D3300AE04FD /* APIClient.swift */,
+				24621E4720736DA600AE04FD /* SimpleAPIClient.swift */,
+				24621E4920736FBD00AE04FD /* CryptoCompareService.swift */,
+			);
+			path = Backend;
+			sourceTree = "<group>";
+		};
 		2464283A1CEF3D9C00B132E9 = {
 			isa = PBXGroup;
 			children = (
@@ -84,7 +106,7 @@
 			children = (
 				246428461CEF3D9C00B132E9 /* AppDelegate.swift */,
 				24D0A28B2072CAC4000B9F3F /* CryptoTrackerStatusApp.swift */,
-				24D0A2932072D3D4000B9F3F /* CryptoTrackerStatusMenu.swift */,
+				24621E4520736D5200AE04FD /* View */,
 				24AA59A020727EA100489EB6 /* Extension */,
 				24AA599D20725A3F00489EB6 /* Protocol */,
 				24AA599A207258E900489EB6 /* Model */,
@@ -100,9 +122,8 @@
 			children = (
 				24621E42207368DD00AE04FD /* Currency */,
 				24AA59AA2072892000489EB6 /* CurrencyFormatter.swift */,
-				24AA599620715BAE00489EB6 /* TickerConnector.swift */,
-				24AA599820715C0600489EB6 /* CryptoCompareAPI.swift */,
 				24AA5992207158DB00489EB6 /* TickerDaemon.swift */,
+				24621E4620736D9300AE04FD /* Backend */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -110,6 +131,7 @@
 		24AA599D20725A3F00489EB6 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
+				24621E4B2073706100AE04FD /* Service.swift */,
 				24AA5994207159AC00489EB6 /* Currency.swift */,
 			);
 			path = Protocol;
@@ -195,16 +217,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				24AA5995207159AC00489EB6 /* Currency.swift in Sources */,
-				24AA599720715BAE00489EB6 /* TickerConnector.swift in Sources */,
 				246428471CEF3D9C00B132E9 /* AppDelegate.swift in Sources */,
 				24AA59A9207288E100489EB6 /* Blockchain.swift in Sources */,
 				24AA59AB2072892000489EB6 /* CurrencyFormatter.swift in Sources */,
 				24AA59A220727EAF00489EB6 /* Date.swift in Sources */,
 				24D0A28C2072CAC4000B9F3F /* CryptoTrackerStatusApp.swift in Sources */,
-				24AA599920715C0600489EB6 /* CryptoCompareAPI.swift in Sources */,
 				24AA599C20725A1600489EB6 /* CurrencyPair.swift in Sources */,
+				24621E4C2073706100AE04FD /* Service.swift in Sources */,
+				24621E4420736D3300AE04FD /* APIClient.swift in Sources */,
 				24AA59AD20728A9700489EB6 /* Fiat.swift in Sources */,
 				24D0A2942072D3D4000B9F3F /* CryptoTrackerStatusMenu.swift in Sources */,
+				24621E4A20736FBD00AE04FD /* CryptoCompareService.swift in Sources */,
+				24621E4820736DA600AE04FD /* SimpleAPIClient.swift in Sources */,
 				24AA5993207158DB00489EB6 /* TickerDaemon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
