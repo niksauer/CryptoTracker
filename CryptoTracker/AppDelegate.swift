@@ -21,7 +21,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         let statusBarItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
         let tickerDaemon = TickerDaemon.shared
-        statusApp = CryptoTrackerStatusApp(statusBarItem: statusBarItem, tickerDaemon: tickerDaemon)
+        let defaults = UserDefaults.standard
+        statusApp = CryptoTrackerStatusApp(statusBarItem: statusBarItem, tickerDaemon: tickerDaemon, defaults: defaults)
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

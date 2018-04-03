@@ -679,20 +679,5 @@
             </view>
             <point key="canvasLocation" x="335" y="-103"/>
         </window>
-        <menu title="MenubarAppMenu" id="xnw-Z3-BSK">
-            <items>
-                <menuItem title="Update" id="fqx-8L-KPe">
-                    <modifierMask key="keyEquivalentModifierMask"/>
-                </menuItem>
-                <menuItem isSeparatorItem="YES" id="e7a-xS-9EM"/>
-                <menuItem title="Open Chart" keyEquivalent="o" id="Bfk-Xc-a0J"/>
-                <menuItem title="Open Exchange" id="chT-UH-oh7">
-                    <modifierMask key="keyEquivalentModifierMask"/>
-                </menuItem>
-                <menuItem isSeparatorItem="YES" id="zxe-iH-zYV"/>
-                <menuItem title="Quit" keyEquivalent="q" id="zgb-Mt-JhL"/>
-            </items>
-            <point key="canvasLocation" x="37" y="711"/>
-        </menu>
     </objects>
 </document>
