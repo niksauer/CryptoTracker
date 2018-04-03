@@ -8,16 +8,20 @@
 
 import Cocoa
 
-@available(OSX 10.12, *)
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
     
     // MARK: - Outlets
     @IBOutlet weak var window: NSWindow!
     
+    // MARK: - Private Properties
+    var statusApp: CryptoTrackerStatusApp?
+    
     // MARK: - NSApplicationDelegate Protocol
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        let _ = CryptoTrackerMenubarApp()
+        let statusBarItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
+        let tickerDaemon = TickerDaemon.shared
+        statusApp = CryptoTrackerStatusApp(statusBarItem: statusBarItem, tickerDaemon: tickerDaemon)
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
@@ -25,4 +29,3 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
         
 }
-

@@ -8,20 +8,17 @@
 
 import Foundation
 
-@available(OSX 10.12, *)
 enum CurrentExchangeRateResult {
     case success(TickerConnector.ExchangeRate)
     case failure(Error)
 }
 
-@available(OSX 10.12, *)
 struct TickerConnector {
     
     // MARK: - Private Properties
     private static let session = URLSession(configuration: .default)
     
     // MARK: - Public Properties
-    @available(OSX 10.12, *)
     struct ExchangeRate {
         let date: Date
         let currencyPair: CurrencyPair

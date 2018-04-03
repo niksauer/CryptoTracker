@@ -12,8 +12,7 @@ enum CryptoCompareError: Error {
     case invalidJSONData
 }
 
-@available(OSX 10.12, *)
-struct CryptoCompareAPI: Exchange {
+struct CryptoCompareAPI {
     
     // MARK: - Private Properties
     private static let baseURL = "https://min-api.cryptocompare.com/data"

@@ -1,5 +1,5 @@
 //
-//  CryptoTrackerMenubarApp.swift
+//  CryptoTrackerStatusApp
 //  CryptoTracker
 //
 //  Created by Niklas Sauer on 02.04.18.
@@ -8,45 +8,46 @@
 
 import Cocoa
 
-@available(OSX 10.12, *)
-struct CryptoTrackerMenubarApp: TickerDaemonDelegate, CryptoTrackerMenubarMenuDelegate {
+struct CryptoTrackerStatusApp: TickerDaemonDelegate, CryptoTrackerStatusMenuDelegate {
 
     // MARK: - Public Properties
     var mainCurrencyPair = CurrencyPair(base: Blockchain.ETH, quote: Fiat.EUR)
     
     // MARK: - Private Properties
     private let statusBarItem: NSStatusItem
-    private let menu: NSMenu
+    private let statusBarMenu: CryptoTrackerStatusMenu
+    
+    private let tickerDaemon: TickerDaemon
+    
     private let formatter = CurrencyFormatter()
     
     // MARK: - Initialization
-    init() {
-        statusBarItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
+    init(statusBarItem: NSStatusItem, tickerDaemon: TickerDaemon) {
+        self.statusBarItem = statusBarItem
+        self.tickerDaemon = tickerDaemon
         
-        let cryptoTrackerMenu = CryptoTrackerMenu(title: "")
-        menu = cryptoTrackerMenu
-        cryptoTrackerMenu.menuDelegate = self
+        self.statusBarMenu = CryptoTrackerStatusMenu(title: "")
+        statusBarMenu.menuDelegate = self
         
-        
-        statusBarItem.menu = menu
+        statusBarItem.menu = statusBarMenu
         statusBarItem.title = "CryptoTracker"
-        
-        TickerDaemon.delegate = self
-        TickerDaemon.addCurrencyPair(mainCurrencyPair)
+    
+        tickerDaemon.delegate = self
+        tickerDaemon.addCurrencyPair(mainCurrencyPair)
     }
     
     // MARK: - TickerDaemonDelegate Protocol
     func didUpdateCurrentExchangeRate(for currencyPair: CurrencyPair) {
-        guard let exchangeRate = currencyPair.currentExchangeRate else {
+        guard let exchangeRate = tickerDaemon.getCurrentExchangeRate(for: currencyPair) else {
             return
         }
         
-        statusBarItem.title = formatter.getCryptoFormatting(for: exchangeRate, blockchain: Blockchain.ETH, digits: 2)
+        statusBarItem.title = formatter.getFormatting(for: exchangeRate, currency: currencyPair.base)
     }
 
     // MARK: - CryptoTrackerMenubarMenuDelegate Protocol
     func didPressUpdateButton() {
-        TickerDaemon.update(completion: nil)
+        tickerDaemon.update(completion: nil)
     }
     
     func didPressOpenChartButton() {

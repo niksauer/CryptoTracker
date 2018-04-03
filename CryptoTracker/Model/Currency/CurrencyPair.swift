@@ -8,7 +8,6 @@
 
 import Foundation
 
-@available(OSX 10.12, *)
 struct CurrencyPair: Hashable {
     
     // MARK: - Public Properties
@@ -19,32 +18,10 @@ struct CurrencyPair: Hashable {
         return base.code + quote.code
     }
     
-    var currentExchangeRate: Double? {
-        return getRate(on: Date())
-    }
-    
     // MARK: - Initialization
     init(base: Currency, quote: Currency) {
         self.base = base
         self.quote = quote
-    }
-    
-    // MARK: - Public Methods
-    func getRate(on date: Date) -> Double? {
-        if date.isToday {
-            return TickerDaemon.getCurrentExchangeRate(for: self)
-        } else {
-//            return ExchangeRate.getExchangeRate(for: self, on: date)
-            return nil
-        }
-    }
-    
-    func register() {
-        TickerDaemon.addCurrencyPair(self)
-    }
-    
-    func deregister() {
-        TickerDaemon.removeCurrencyPair(self)
     }
     
     // MARK: - Hashable Protocol

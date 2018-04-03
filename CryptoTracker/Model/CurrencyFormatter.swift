@@ -1,5 +1,5 @@
 //
-//  Formatter.swift
+//  CurrencyFormatter.swift
 //  CryptoTracker
 //
 //  Created by Niklas Sauer on 02.04.18.
@@ -8,15 +8,14 @@
 
 import Foundation
 
-struct CurrencyFormatter {
-    func getCryptoFormatting(for value: Double, blockchain: Blockchain, digits: Int?) -> String? {
+struct CurrencyFormatter {    
+    func getFormatting(for value: Double, currency: Currency) -> String? {
         let formatter = NumberFormatter()
         formatter.numberStyle = .decimal
-        formatter.minimumFractionDigits = 2
-        formatter.maximumFractionDigits = digits ?? blockchain.decimalDigits
+        formatter.maximumFractionDigits = currency.decimalDigits
         
         if let formattedString = formatter.string(from: NSNumber(value: value)) {
-            return "\(blockchain.symbol) \(formattedString)"
+            return "\(currency.symbol) \(formattedString)"
         } else {
             return nil
         }

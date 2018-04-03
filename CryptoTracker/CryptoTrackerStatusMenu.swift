@@ -1,5 +1,5 @@
 //
-//  CryptoTrackerMenu.swift
+//  CryptoTrackerStatusMenu
 //  CryptoTracker
 //
 //  Created by Niklas Sauer on 02.04.18.
@@ -8,11 +8,17 @@
 
 import Cocoa
 
-@available(OSX 10.12, *)
-class CryptoTrackerMenu: NSMenu {
+protocol CryptoTrackerStatusMenuDelegate {
+    func didPressUpdateButton()
+    func didPressOpenChartButton()
+    func didPressOpenExchangeButton()
+    func didPressQuitButton()
+}
+
+class CryptoTrackerStatusMenu: NSMenu {
     
     // MARK: - Public Properties
-    var menuDelegate: CryptoTrackerMenubarMenuDelegate?
+    var menuDelegate: CryptoTrackerStatusMenuDelegate?
     
     // MARK: - Initialization
     override init(title: String) {
@@ -20,19 +26,19 @@ class CryptoTrackerMenu: NSMenu {
         
         let updateItem = NSMenuItem(title: "Update", action: #selector(didPressUpdateButton(_:)), keyEquivalent: "")
         updateItem.target = self
-        self.addItem(updateItem)
+        addItem(updateItem)
         
-        self.addItem(NSMenuItem.separator())
+        addItem(NSMenuItem.separator())
         
         let chartItem = NSMenuItem(title: "Open Chart", action: #selector(didPressOpenChartButton(_:)), keyEquivalent: "o")
         chartItem.target = self
-        self.addItem(chartItem)
+        addItem(chartItem)
         
         let exchangeItem = NSMenuItem(title: "Open Exchange", action: #selector(didPressOpenExchangeButton(_:)), keyEquivalent: "")
         exchangeItem.target = self
-        self.addItem(exchangeItem)
+        addItem(exchangeItem)
         
-        self.addItem(NSMenuItem.separator())
+        addItem(NSMenuItem.separator())
         
 //        let submenu = NSMenu(title: "Price")
 //        let submenuItem = NSMenuItem(title: "Set Price", action: nil, keyEquivalent: ",")
@@ -46,9 +52,9 @@ class CryptoTrackerMenu: NSMenu {
 //        submenu.addItem(option1)
 //        submenu.addItem(option2)
         
-        let quitItem = NSMenuItem(title: "Quit", action: #selector(CryptoTrackerMenu.didPressQuitButton(_:)), keyEquivalent: "q")
+        let quitItem = NSMenuItem(title: "Quit", action: #selector(didPressQuitButton(_:)), keyEquivalent: "q")
         quitItem.target = self
-        self.addItem(quitItem)
+        addItem(quitItem)
     }
     
     required init(coder decoder: NSCoder) {
