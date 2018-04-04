@@ -39,8 +39,6 @@ class CryptoTrackerStatusApp: TickerDaemonDelegate, CryptoTrackerStatusMenuDeleg
     
         tickerDaemon.delegate = self
         tickerDaemon.addCurrencyPair(mainCurrencyPair)
-        
-        
     }
     
     // MARK: - TickerDaemonDelegate Protocol
